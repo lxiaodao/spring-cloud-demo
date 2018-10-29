@@ -1,0 +1,26 @@
+server:
+  port: 9999
+  
+
+
+spring:
+  application:
+    name: gateway-ribbon
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: pms_route
+        uri: lb://say-hello
+        predicates:
+        - Path=/greeting
+      - id: test_route
+        uri: http://httpbin.org:80
+        predicates:
+        - Path=/get
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.10.4:8761/eureka/

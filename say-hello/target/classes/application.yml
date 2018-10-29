@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: say-hello
+
+server:
+  port: 8090
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.10.4:8761/eureka/
+ 
