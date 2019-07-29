@@ -62,10 +62,19 @@
 		</dependency>
 		
 		<!-- add eureka -->
+		<!-- 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		 -->
+		
+		<!-- Add nacos -->
+		<dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>0.2.2.RELEASE</version>
+            </dependency>
 		
     </dependencies>
 

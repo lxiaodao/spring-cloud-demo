@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
+Built-By: yangliu
+Build-Jdk: 11
 Implementation-Title: say-hello
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: yang
 Implementation-Vendor-Id: hello
-Build-Jdk: 1.8.0_152
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/say-hello
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/say-hello
 Created-By: Maven Integration for Eclipse
 

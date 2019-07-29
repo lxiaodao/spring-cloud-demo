@@ -7,6 +7,9 @@ spring:
   application:
     name: gateway-ribbon
   cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
     gateway:
       discovery:
         locator:
@@ -20,7 +23,7 @@ spring:
         uri: http://httpbin.org:80
         predicates:
         - Path=/get
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.10.4:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://192.168.10.4:8761/eureka/
