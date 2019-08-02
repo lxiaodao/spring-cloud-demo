@@ -1,0 +1,41 @@
+#默认数据库连接配置
+spring:
+  jpa:
+     show-sql: true
+     format_sql: true
+   
+        
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    #type: com.mysql.jdbc.Driver
+    url:  jdbc:postgresql://localhost:5432/test_db
+    username: postgres
+    password: 123456
+    hikari:
+            minimum-idle: 5
+            maximum-pool-size: 20
+            idle-timeout: 30000
+            max-lifetime: 2000000
+            connection-timeout: 30000
+            data-source-properties:
+                cachePrepStmts: true
+                prepStmtCacheSize: 250
+                prepStmtCacheSqlLimit: 2048
+                useServerPrepStmts: true
+             
+
+     
+  #字符集和json格式工具
+  servlet:
+    multipart:
+      max-file-size: 10MB
+        
+  http:
+    encoding:
+      charset: utf-8
+    converters:
+      preferred-json-mapper: jackson
+   
+  application:
+    name: SAAS-DEMO
+
