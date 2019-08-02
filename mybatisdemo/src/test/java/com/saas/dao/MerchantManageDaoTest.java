@@ -6,6 +6,7 @@ package com.saas.dao;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -21,12 +22,15 @@ import com.saas.dto.ProductWithTypeName;
 import com.saas.mapper.ProductMapper;
 import com.saas.mapper.ProductTypeMapper;
 
+import lombok.extern.log4j.Log4j2;
+
 /**
  * @author yangliu
  *
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+//@Log4j2
 public class MerchantManageDaoTest {
 	
 	@Autowired
@@ -40,6 +44,7 @@ public class MerchantManageDaoTest {
 	
 	static Integer pid;
 	static Integer typeid;
+	private static final Logger log = org.apache.logging.log4j.LogManager.getLogger(MerchantManageDaoTest.class);
 	 @Before
 	 public void init() {
 		 
@@ -60,7 +65,7 @@ public class MerchantManageDaoTest {
 	        
 	        
 	        //	    
-	        System.out.println("------------------this is return key of product------------------"+pid);
+	        log.info("------------------this is return key of product------------------"+pid);
 		 
 	 }
 	 @After
