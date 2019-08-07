@@ -21,8 +21,10 @@ import com.saas.domain.ProductType;
 import com.saas.dto.ProductWithTypeName;
 import com.saas.mapper.ProductMapper;
 import com.saas.mapper.ProductTypeMapper;
+import com.saas.utils.ToJson;
 
 import lombok.extern.log4j.Log4j2;
+
 
 /**
  * @author yangliu
@@ -30,7 +32,7 @@ import lombok.extern.log4j.Log4j2;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-//@Log4j2
+@Log4j2
 public class MerchantManageDaoTest {
 	
 	@Autowired
@@ -44,7 +46,7 @@ public class MerchantManageDaoTest {
 	
 	static Integer pid;
 	static Integer typeid;
-	private static final Logger log = org.apache.logging.log4j.LogManager.getLogger(MerchantManageDaoTest.class);
+	//private static final Logger log = org.apache.logging.log4j.LogManager.getLogger(MerchantManageDaoTest.class);
 	 @Before
 	 public void init() {
 		 
@@ -95,11 +97,13 @@ public class MerchantManageDaoTest {
 	@Test
 	public void test_queryProductAnnotation() {
 		//
+		
 		List<ProductWithTypeName> pList=mmdao.queryProductAnnotation("iphone 7", null);
 		Assert.assertTrue(!pList.isEmpty());
 		//Assert.assertEquals(pid, pList.get(0).getProdectId());
 		boolean isex=false;
 		for(ProductWithTypeName pt:pList) {
+			log.info("===test_queryProductAnnotation"+ToJson.toJson(pt));
 			if(pt.getProdectId()==pid) {
 				isex=true;
 				break;

@@ -53,10 +53,48 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        	<!-- 
+		<dependency>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>mongo-java-driver</artifactId>
+		    <version>3.10.2</version>
+		</dependency>
+		
+		
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-nosql</artifactId>
+		    <version>2.9.1</version>
+		</dependency>
+		-->
+		
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-mongodb3</artifactId>
+		    <version>2.12.0</version>
+		</dependency>
+		
+		 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
+		
+		<!--  This is not useful to log4j2
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-mongodb-log4j</artifactId>
+		    <version>1.10.23.RELEASE</version>
+		    
+		</dependency>
+		-->
+		<dependency>
+			  <groupId>org.projectlombok</groupId>
+			  <artifactId>lombok</artifactId>
+			  <version>1.18.8</version>
+		</dependency>
+	
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -76,12 +114,7 @@
 			    
 			</dependency>
 			-->
-		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <version>1.18.4</version>
-		    <scope>provided</scope>
-		</dependency>
+		
 		
 	</dependencies>
 
