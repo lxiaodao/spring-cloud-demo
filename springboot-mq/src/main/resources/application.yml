@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mq-service
+    #
+  #cloud:
+  #  nacos:
+  #    discovery:
+  #      server-addr: 127.0.0.1:8848
+
+
+
+rocketmq:
+  producer:
+    group: event-producer-group
+    sendMessageTimeout: 300000      
+  name-server: 10.15.18.125:9876
+
+
+
+server:
+  port: 8090
+ 
+
