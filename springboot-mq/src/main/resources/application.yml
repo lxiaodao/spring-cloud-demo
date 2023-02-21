@@ -11,13 +11,13 @@ spring:
 
 rocketmq:
   producer:
-    group: event-producer-group
+    group: event-producer-group    
     sendMessageTimeout: 300000      
   name-server: 10.15.18.125:9876
 
 
 
 server:
-  port: 8090
+  port: 8070
  
 

@@ -18,13 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProducerController {
 	
 	@Autowired
-	private DataCityProducer dataCityProducer;
+	private EventProducer eventProducer;
 
 	@GetMapping("/sendMessage")
-	public String sendMessage(String message) {
+	public String sendMessage(String tag,String message) {
 		// @RequestParam("message")
-
-		dataCityProducer.sendMessage("TestTopic", "事件消息吗，dong street.");
+		eventProducer.sendMessage(tag, message);
 		return "消息发送完成";
 	}
 
